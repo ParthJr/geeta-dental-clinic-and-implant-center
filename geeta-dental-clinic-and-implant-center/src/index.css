@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-midnight: #123C43;
+  --color-primary-dark: #00262B;
+  --color-mint: #B8E3D5;
+  --color-mint-light: #C0ECDD;
+  --color-lime: #D5F06A;
+  --color-surface: #F8FAF8;
+  --color-surface-low: #F2F4F2;
+  --color-surface-lowest: #FFFFFF;
+  --color-hairline: #E8EEEC;
+  --color-outline-subtle: #C0C8C9;
+  --color-graphite: #202C30;
+  --color-muted: #41484A;
+}
+
+:root {
+  font-family: var(--font-body);
+  color: #191C1B;
+  background-color: #F8FAF8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Hairline borders & Swiss grid lines */
+.border-hairline {
+  border-color: #E8EEEC;
+}
+
+/* Focus visible styles for high accessibility */
+*:focus-visible {
+  outline: 2px solid #123C43;
+  outline-offset: 2px;
+}
+
+/* Reduced motion overrides */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
